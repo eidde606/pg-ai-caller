@@ -1,9 +1,11 @@
 from dotenv import load_dotenv
+
+load_dotenv()
+
 from app.caller import make_call
 from app.patient import get_patient_response
 from app.scenarios import SCENARIOS
-
-load_dotenv()
+from app.caller import make_call
 
 
 def main():
@@ -17,7 +19,15 @@ def main():
     print("\nAI Patient:")
     print(response)
 
-    make_call()
+    print("\nStarting call...")
+    call_sid = make_call(response)
+
+    if call_sid:
+        print(f"Call created: {call_sid}")
+    else:
+        print("Call failed.")
+
+    
 
 
 if __name__ == "__main__":
