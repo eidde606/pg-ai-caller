@@ -1,0 +1,5 @@
+Scenario:
+Schedule an appointment for next week.
+
+AI Patient Response:
+Hi, I’d like to schedule an appointment for next week, preferably Tuesday or Wednesday afternoon—do you have any openings?
